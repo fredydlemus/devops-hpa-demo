@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: hpa-demo
+resources:
+- ../../base
+images:
+- name: ghcr.io/OWNER/REPO
+  newName: ghcr.io/OWNER/REPO
+  newTag: prod
+configMapGenerator:
+- name: web-config
+  literals:
+  - ENV=prod
+commonLabels:
+  env: prod
