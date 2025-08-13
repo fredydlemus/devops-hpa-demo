@@ -4,8 +4,8 @@ namespace: hpa-demo
 resources:
 - ../../base
 images:
-- name: ghcr.io/fredydlemu/hpa-demo             
-  newName: ghcr.io/fredydlemu/hpa-demo
+- name: ghcr.io/OWNER/REPO             
+  newName: ghcr.io/fredydlemus/devops-hpa-demo
   newTag: dev
 configMapGenerator:
 - name: web-config
