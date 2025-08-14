@@ -11,5 +11,8 @@ configMapGenerator:
 - name: web-config
   literals:
   - ENV=dev
-commonLabels:
-  env: dev
+labels:
+- pairs:
+    env: dev
+  includeSelectors: true
+  includeTemplates: true
